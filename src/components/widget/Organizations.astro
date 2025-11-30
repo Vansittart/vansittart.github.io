@@ -1,0 +1,39 @@
+---
+import ButtonWithLogo from "../control/ButtonWithLogo.astro";
+import WidgetLayout from "./WidgetLayout.astro";
+
+// Define your custom organizations here
+const organizations = [
+    { name: "Apache", url: "https://apache.org", logo: "/assets/images/apache_logo.png" },
+    { name: "Openatom", url: "https://www.openatom.org/", logo: "/assets/images/openatom_logo.png"},
+    { name: "The NixOS", url: "https://nixos.org/community/#foundation", logo: "/assets/images/nixos_logo.png" },
+    // Add more organizations as needed
+    // Format: { name: "Organization Name", url: "https://example.com", logo: "/assets/images/org-logo.png" }
+    // Note: Place your logo files in the public/assets/images/ directory
+];
+
+const COLLAPSED_HEIGHT = "7.5rem";
+// Always show all organizations, never collapse
+const isCollapsed = false;
+
+interface Props {
+	class?: string;
+	style?: string;
+}
+const className = Astro.props.class;
+const style = Astro.props.style;
+---
+
+<WidgetLayout name="Committing to" id="organizations" isCollapsed={isCollapsed} collapsedHeight={COLLAPSED_HEIGHT}
+                class={className} style={style}
+>
+    {organizations.map((org) =>
+        <ButtonWithLogo
+            url={org.url}
+            logo={org.logo}
+            label={`Visit ${org.name}`}
+        >
+            {org.name}
+        </ButtonWithLogo>
+    )}
+</WidgetLayout>

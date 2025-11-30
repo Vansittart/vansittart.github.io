@@ -1,0 +1,41 @@
+---
+interface Props {
+	logo?: string;
+	url?: string;
+	label?: string;
+}
+const { logo, url, label } = Astro.props;
+---
+<a href={url} aria-label={label}>
+    <button
+        class:list={`
+            w-full
+            h-10
+            rounded-lg
+            bg-none
+            hover:bg-[var(--btn-plain-bg-hover)]
+            active:bg-[var(--btn-plain-bg-active)]
+            transition-all
+            pl-2
+            hover:pl-3
+            
+            text-neutral-700
+            hover:text-[var(--primary)]
+            dark:text-neutral-300
+            dark:hover:text-[var(--primary)]
+        `
+        }
+    >
+        <div class="flex items-center justify-between relative mr-2">
+            <div class="overflow-hidden text-left whitespace-nowrap overflow-ellipsis">
+                <slot></slot>
+            </div>
+            { logo !== undefined && logo !== null && logo !== '' &&
+                <div class="transition w-9 h-9 ml-3 rounded-lg flex items-center justify-center">
+                    <img src={logo} alt="Organization logo" class="w-7 h-7 object-contain" 
+                         onerror="this.parentElement.style.display='none'" />
+                </div>
+            }
+        </div>
+    </button>
+</a>
