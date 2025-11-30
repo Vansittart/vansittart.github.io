@@ -1,11 +1,13 @@
 import Key from "../i18nKey";
 import type { Translation } from "../translation";
 
-export const ko: Translation = {
+export default {
 	[Key.home]: "홈",
 	[Key.about]: "소개",
 	[Key.archive]: "아카이브",
+	[Key.progress]: "진행 상황",
 	[Key.search]: "검색",
+	[Key.loading]: "로딩 중",
 
 	[Key.tags]: "태그",
 	[Key.categories]: "카테고리",
@@ -28,11 +30,11 @@ export const ko: Translation = {
 
 	[Key.lightMode]: "밝은 모드",
 	[Key.darkMode]: "어두운 모드",
-	[Key.systemMode]: "시스템 모드",
+	[Key.systemMode]: "시스템",
 
-	[Key.more]: "더 보기",
+	[Key.more]: "더보기",
 
 	[Key.author]: "저자",
 	[Key.publishedAt]: "게시일",
 	[Key.license]: "라이선스",
-};
+} as Translation;

@@ -1,15 +1,17 @@
 import Key from "../i18nKey";
 import type { Translation } from "../translation";
 
-export const id: Translation = {
+export default {
 	[Key.home]: "Beranda",
 	[Key.about]: "Tentang",
 	[Key.archive]: "Arsip",
+	[Key.progress]: "Perkembangan",
 	[Key.search]: "Cari",
+	[Key.loading]: "Memuat",
 
 	[Key.tags]: "Tag",
 	[Key.categories]: "Kategori",
-	[Key.recentPosts]: "Postingan Terbaru",
+	[Key.recentPosts]: "Pos Terbaru",
 
 	[Key.comments]: "Komentar",
 
@@ -21,8 +23,8 @@ export const id: Translation = {
 	[Key.wordsCount]: "kata",
 	[Key.minuteCount]: "menit",
 	[Key.minutesCount]: "menit",
-	[Key.postCount]: "postingan",
-	[Key.postsCount]: "postingan",
+	[Key.postCount]: "pos",
+	[Key.postsCount]: "pos",
 
 	[Key.themeColor]: "Warna Tema",
 
@@ -30,9 +32,9 @@ export const id: Translation = {
 	[Key.darkMode]: "Gelap",
 	[Key.systemMode]: "Sistem",
 
-	[Key.more]: "Lainnya",
+	[Key.more]: "Lebih",
 
 	[Key.author]: "Penulis",
 	[Key.publishedAt]: "Diterbitkan pada",
 	[Key.license]: "Lisensi",
-};
+} as Translation;
