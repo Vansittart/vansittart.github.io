@@ -50,7 +50,7 @@ export const profileConfig: ProfileConfig = {
 		{
 			name: "Email",
 			icon: "material-symbols:mail-rounded",
-			url: "mailto:Vansittart@proton.me",
+			url: "mailto:chenrui@svecco.org",
 		},
         {
             name: "Discord",
@@ -72,11 +72,11 @@ export const profileConfig: ProfileConfig = {
 
 export const organizationsConfig: OrganizationsConfig = {
 	organizations: [
-		{ name: "NixOS", url: "https://nixos.org/community/", logo: "/assets/images/nixos_logo.png", description: "Community", admitted: true },
-		{ name: "Gentoo", url: "https://www.gentoo.org/", logo: "/assets/images/gentoo_logo.png", description: "Community", admitted: true },
         { name: "A.S.F.", url: "https://apache.org", logo: "/assets/images/apache_logo.png", description: "Unlock", admitted: false },
         { name: "Openatom", url: "https://www.openatom.org/", logo: "/assets/images/openatom_logo.png", description: "Unlock", admitted: false },
-	],
+        // { name: "NixOS", url: "https://nixos.org/community/", logo: "/assets/images/nixos_logo.png", description: "Community", admitted: true },
+        // { name: "Gentoo", url: "https://www.gentoo.org/", logo: "/assets/images/gentoo_logo.png", description: "Community", admitted: true },
+    ],
 };
 
 export const educationConfig: EducationConfig = {

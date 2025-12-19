@@ -11,7 +11,11 @@ interface Props {
 
 const className = Astro.props.class;
 ---
-<div id="sidebar" class:list={[className, "w-full"]}>
+<div id="sidebar" class:list={[className, "w-full relative"]}>
+    <!-- Linux Distribution Logo positioned absolutely so it doesn't affect other elements -->
+    <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-[150%] z-10">
+        <img src="/assets/images/fedora_workstation.svg" alt="Fedora Workstation Logo" class="w-auto h-auto scale-[1.5]">
+    </div>
     <div class="flex flex-col w-full gap-4 mb-4">
         <Profile></Profile>
     </div>
